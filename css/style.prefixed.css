@@ -1,0 +1,26 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+[class*="col-"] {
+  width: 100%;
+  padding: 12px;
+  float: left;
+}
+
+.container {
+  width: 100%;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a:link {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.prefixed.css.map */
