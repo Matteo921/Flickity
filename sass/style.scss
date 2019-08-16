@@ -1,3 +1,4 @@
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
@@ -11,7 +12,7 @@
 }
 
 .container {
-    width: 100%;
+    max-width: 1200px;
 }
 .clearfix::before, .clearfix::after {
     content: "";
@@ -20,4 +21,9 @@
 }
 a:link{
     text-decoration: none;
+}
+// main carousel
+.main-carousel{
+	width: 100%;
+	min-height: 250px;
 }

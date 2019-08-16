@@ -1,5 +1,5 @@
 {
-   "name": "Gra-modal",
+   "name": "flickity",
    "version": "1.0.0",
    "description": "",
    "main": "index.js",
@@ -36,10 +36,10 @@
    },
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/Matteo921/Gra-modal.git"
+      "url": "https://github.com/Matteo921/Flickity.git"
    },
    "bugs": {
-      "url": "https://github.com/Matteo921/Gra-modal/issues"
+      "url": "https://github.com/Matteo921/Flickity.git/issues"
    },
-   "homepage": "https://github.com/Matteo921/Gra-modal#readme"
+   "homepage": "https://github.com/Matteo921/Flickity.git#readme"
 }

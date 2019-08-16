@@ -11,7 +11,7 @@
 }
 
 .container {
-  width: 100%;
+  max-width: 1200px;
 }
 
 .clearfix::before, .clearfix::after {
@@ -22,6 +22,10 @@
 
 a:link {
   text-decoration: none;
+}
+
+.main-carousel {
+  min-height: 250px;
 }
 
 /*# sourceMappingURL=style.css.map */
