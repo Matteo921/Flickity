@@ -13,6 +13,8 @@
 
 .container {
     max-width: 1200px;
+    margin: auto;
+    margin: 0px auto;
 }
 .clearfix::before, .clearfix::after {
     content: "";
@@ -24,6 +26,11 @@ a:link{
 }
 // main carousel
 .main-carousel{
+	
+	
+}
+.carouselimage{
+	height: 600px;
 	width: 100%;
-	min-height: 250px;
+	
 }

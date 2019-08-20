@@ -12,6 +12,8 @@
 
 .container {
   max-width: 1200px;
+  margin: auto;
+  margin: 0px auto;
 }
 
 .clearfix::before, .clearfix::after {
@@ -24,8 +26,9 @@ a:link {
   text-decoration: none;
 }
 
-.main-carousel {
-  min-height: 250px;
+.carouselimage {
+  height: 600px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
