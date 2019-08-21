@@ -1,4 +1,7 @@
 
+@import "flickity.min.css";
+@import "normalize";
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
@@ -14,7 +17,7 @@
 .container {
     max-width: 1200px;
     margin: auto;
-    margin: 0px auto;
+
 }
 .clearfix::before, .clearfix::after {
     content: "";
@@ -25,12 +28,44 @@ a:link{
     text-decoration: none;
 }
 // main carousel
-.main-carousel{
-	
-	
+
+.carousel-cell{
+	width: 100%;
+	margin-right: 10px;
 }
 .carouselimage{
 	height: 600px;
 	width: 100%;
 	
+}
+.carousel-cell.is-selected {
+  background: #F5F5F2;
+}
+/* smaller, dark, rounded square */
+.flickity-button {
+  background: #333;
+}
+.flickity-button:hover {
+  background: #F90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+
+ol.flickity-page-dots{
+	display: none;
 }
