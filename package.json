@@ -11,6 +11,7 @@
       "init:files": "touch README.md index.html sass/style.scss js/script.js",
       "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
       "build": "npm-run-all build:* test",
+      "build:mustache": "mustache dataView.json myTemplate.mustache > flickity/output.html",
       "build:sass": "node-sass --output-style compact -o css sass",
       "build:autoprefixer": "autoprefixer-cli css/style.css",
       "build-dev:sass": "node-sass --output-style expanded --source-map true -o css sass",
@@ -32,6 +33,7 @@
    "dependencies": {
       "dirp": "^0.6.0",
       "flickity": "^2.2.1",
+      "mustache": "^3.0.2",
       "normalize.css": "^8.0.1"
    },
    "repository": {

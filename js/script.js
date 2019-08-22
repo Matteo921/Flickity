@@ -17,3 +17,20 @@ var flkty = new Flickity( '.main-carousel', {
   prevNextButtons: false,
   
 });
+// mustache template
+(function(){
+
+var templatebox = document.getElementById('template-image-list').innerHTML;
+var templateItem = document.getElementById('template-image-content').innerHTML
+
+Mustache.parse(templateItem);
+
+var listItem = '';
+	for(var i = 0; i < imageData.length; i++){
+		console.log(imageData);
+		listItem += Mustache.render(templateItem, imageData[i]);
+	}
+
+var fullImageList = Mustache.render(templatebox,{products: ListItem});
+results.insertAdjacentHTML('beforeend', fullImageList)
+})();
