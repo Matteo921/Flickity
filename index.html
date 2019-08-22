@@ -34,7 +34,7 @@
 	<body>
 		<div id="top">
 			<header id="title">Carousel</header>
-			<!-- <nav id="MENU"></nav> -->
+			
 			<aside>
 
 							<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
@@ -75,58 +75,101 @@
 		</div>
 
 <!-- Mustache -->
-<div id="page-wrapper" class=".container">
-	<h2>Template test</h2>
+
+<script type="x-tmpl-mustache" id="template-slide">
+	<div class="carousel-cell">
+			<div class="container">
+				<img class="carouselimage" src="{{url}}">
+					<p>{{text}}</p>
+			</div>
+	</div>
+</script>
+
+<div id="page-wrapper" class="container">
+	<h2>AdobeStock</h2>
 	<div id="results"></div>
+</div>
+<script type="text/javascript">
+	
+var slidesArr = [
+  {
+    url: 'https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg',
+    text: 'Orla Perć',
+  },
+  {
+    url: 'http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg',
+    text: 'Mikołajki',
+  },
+  {
+    url: 'https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png',
+    text: 'Hiszpania',
+  },
+  {
+    url: 'https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    text: 'Miami',
+  },
+  {
+    url: 'https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    text: 'Canion',
+  },
+];
+
+</script>
+
+<div id="page-wrapper" class="container">
+	<h2>Time for Life!</h2>
+	<div id="results2"></div>
 </div>
 
 
 <script type="x-tmpl-mustache" id="template-image-list">
-	<h3>Image List</h3>
-	<ul>
-		{{{product}}}
-	</ul>
+	
+	<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+		{{{products}}} for {{{url}}}
+	</div>
 </script>
 
 
 <script type="x-tmpl-mustache" id="template-image-content">
-	<h3>Image List</h3>
+	
 	<div>
 		<header>lorem ipsum....</header>
-			<title></title>
-			<description></description>
+		<h1 class="title">{{title}}</h1>
+		<div>{{{description}}}</div>
 	</div>
 </script>
-<script type="x-tmpl-mustache" id="template-image">
-		<div id=".container">
-			<header>lorem ipsum....</header>
-			<title></title>
-			<description></description>
-		</div>
 
+
+<script type="x-tmpl-mustache" id="template-image">
+		<div class="container" id="{{id}}">
+			<header>lorem ipsum....</header>
+			<h1 class="title">{{title}}</h1>
+			<div>{{{description}}}</div>
+		</div>
 </script>
 
 <script type="text/javascript" id="template-image">
+
 	var imageData = [
 		{
-			id: 'image1'
-			title: 'Lorem ipsum.'
-			description: '<p>Lorem ipsum.</p> <img src="https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			id: 'image1',
+			title: 'Lorem ipsum.',
+			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 		{
-			id: 'image2'
-			title: 'Lorem ipsum.'
-			description: '<p>Lorem ipsum.</p> <img src="https://as2.ftcdn.net/jpg/01/43/74/03/500_F_143740323_xZRafcPhVPf5F7BkfVQYNCX8JlpCrPtf.jpg" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			id: 'image2',
+			title: 'Lorem ipsum.',
+			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://as2.ftcdn.net/jpg/01/43/74/03/500_F_143740323_xZRafcPhVPf5F7BkfVQYNCX8JlpCrPtf.jpg" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 		{
-			id: 'image3'
-			title: 'Lorem ipsum.'
-			description: '<p>Lorem ipsum.</p> <img src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			id: 'image3',
+			title: 'Lorem ipsum.',
+			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 		{
-			id: 'image4'
-			title: 'Lorem ipsum.'
-			description: '<p>Lorem ipsum.</p> <img src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			id: 'image4',
+			title: 'Lorem ipsum.',
+			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 	];
 </script>
@@ -134,9 +177,10 @@
 	
 
 <!-- Script -->
-<script src="Mustache.js"></script>
-<script src="js/script.js"></script>
+<script src="js/Mustache.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-	</body>
+<script src="js/script.js"></script>
+
+</body>
 
 </html>
