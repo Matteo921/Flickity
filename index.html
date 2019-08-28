@@ -37,8 +37,8 @@
 			
 			<aside>
 
-							<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-								  <div class="carousel-cell">
+							<div class="mycarousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+								  <!-- <div class="carousel-cell">
 								  		<div class="container">
 
 								  			<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg">
@@ -68,7 +68,7 @@
 								  			<img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
 								  				<p>Canion</p>
 								  		</div>
-								  </div>
+								  </div> -->
 								 
 							</div>
 			</aside>
@@ -77,16 +77,40 @@
 <!-- Mustache -->
 
 <script type="x-tmpl-mustache" id="template-slide">
-	<div class="carousel-cell">
+	<div class="mycarousel">
 			<div class="container">
 				<img class="carouselimage" src="{{url}}">
-					<p>{{text}}</p>
+					<p>{{{text}}}</p>
+			</div>
+	</div>
+	<div class="mycarousel">
+			<div class="container">
+				<img class="carouselimage" src="{{url}}">
+					<p>{{{text}}}</p>
+			</div>
+	</div>
+	<div class="mycarousel">
+			<div class="container">
+				<img class="carouselimage" src="{{url}}">
+					<p>{{{text}}}</p>
+			</div>
+	</div>
+	<div class="mycarousel">
+			<div class="container">
+				<img class="carouselimage" src="{{url}}">
+					<p>{{{text}}}</p>
+			</div>
+	</div>
+	<div class="mycarousel">
+			<div class="container">
+				<img class="carouselimage" src="{{url}}">
+					<p>{{{text}}}</p>
 			</div>
 	</div>
 </script>
 
 <div id="page-wrapper" class="container">
-	<h2>AdobeStock</h2>
+	<h2>Result JS code</h2>
 	<div id="results"></div>
 </div>
 <script type="text/javascript">
@@ -116,16 +140,11 @@ var slidesArr = [
 
 </script>
 
-<div id="page-wrapper" class="container">
-	<h2>Time for Life!</h2>
-	<div id="results2"></div>
-</div>
-
 
 <script type="x-tmpl-mustache" id="template-image-list">
 	
-	<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-		{{{products}}} for {{{url}}}
+	<div class="mycarousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
+		{{{elements}}} {{url}}
 	</div>
 </script>
 
@@ -133,7 +152,7 @@ var slidesArr = [
 <script type="x-tmpl-mustache" id="template-image-content">
 	
 	<div>
-		<header>lorem ipsum....</header>
+		<header>Another slide</header>
 		<h1 class="title">{{title}}</h1>
 		<div>{{{description}}}</div>
 	</div>
@@ -142,11 +161,11 @@ var slidesArr = [
 
 <script type="x-tmpl-mustache" id="template-image">
 		<div class="container" id="{{id}}">
-			<header>lorem ipsum....</header>
+			
 			<h1 class="title">{{title}}</h1>
 			<div>{{{description}}}</div>
 		</div>
-</script>
+</script> 
 
 <script type="text/javascript" id="template-image">
 
@@ -154,22 +173,27 @@ var slidesArr = [
 		{
 			id: 'image1',
 			title: 'Lorem ipsum.',
-			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://images.pexels.com/photos/1298601/pexels-photo-1298601.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 		{
 			id: 'image2',
 			title: 'Lorem ipsum.',
-			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://as2.ftcdn.net/jpg/01/43/74/03/500_F_143740323_xZRafcPhVPf5F7BkfVQYNCX8JlpCrPtf.jpg" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 		{
 			id: 'image3',
 			title: 'Lorem ipsum.',
-			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 		{
 			id: 'image4',
 			title: 'Lorem ipsum.',
-			description: '<p>Lorem ipsum.</p> <img class="carouselimage" src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Dolor sit.</p>'
+		},
+				{
+			id: 'image5',
+			title: 'Lorem ipsum.',
+			description: ' <img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Dolor sit.</p>'
 		},
 	];
 </script>
