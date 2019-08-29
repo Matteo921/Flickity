@@ -16,6 +16,7 @@
 	    	.container{
 	    		background-image:url(https://images.pexels.com/photos/2763927/pexels-photo-2763927.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); 
 	    		box-shadow: 25px 18px 20px 0px rgba(0,0,0,0.75);
+	    		max-height: 800px;
 	    	}
 	    	p{
 	    		font-size: 30px;
@@ -34,138 +35,32 @@
 	<body>
 		<div id="top">
 			<header id="title">Carousel</header>
-			
-			<aside>
+					<script type="x-tmpl-mustache" id="template-slide">
+	<div class="carousel-cell" data-flickity='{ "cellAlign": "left", "cellAlign": "next", "contain": true }'>
 
-							<div class="mycarousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-								  <!-- <div class="carousel-cell">
-								  		<div class="container">
+		<div class="carousel-cell">
 
-								  			<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg">
-								  				<p>Orla Perć</p>
-								  		</div>
-								  </div>
-								  <div class="carousel-cell">
-								  		<div class="container">
-								  			<img class="carouselimage" src="http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg">
-								  				<p>Mikołajki</p>
-								  		</div>
-								  </div>
-								  <div class="carousel-cell">
-								  		<div class="container">
-								  			<img class="carouselimage" src="https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png">
-								  				<p>Hiszpania</p>
-								  		</div>
-								  </div>
-								  <div class="carousel-cell">
-								  		<div class="container">
-								  			<img class="carouselimage" src="https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-								  				<p>Miami</p>
-								  		</div>
-								  </div>
-								  <div class="carousel-cell">
-								  		<div class="container">
-								  			<img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
-								  				<p>Canion</p>
-								  		</div>
-								  </div> -->
-								 
-							</div>
-			</aside>
+				<div class="container">
+					{{{description}}}	
+				</div>			
+						
 		</div>
-
-<!-- Mustache -->
-
-<script type="x-tmpl-mustache" id="template-slide">
-	<div class="mycarousel">
-			<div class="container">
-				<img class="carouselimage" src="{{url}}">
-					<p>{{{text}}}</p>
-			</div>
-	</div>
-	<div class="mycarousel">
-			<div class="container">
-				<img class="carouselimage" src="{{url}}">
-					<p>{{{text}}}</p>
-			</div>
-	</div>
-	<div class="mycarousel">
-			<div class="container">
-				<img class="carouselimage" src="{{url}}">
-					<p>{{{text}}}</p>
-			</div>
-	</div>
-	<div class="mycarousel">
-			<div class="container">
-				<img class="carouselimage" src="{{url}}">
-					<p>{{{text}}}</p>
-			</div>
-	</div>
-	<div class="mycarousel">
-			<div class="container">
-				<img class="carouselimage" src="{{url}}">
-					<p>{{{text}}}</p>
-			</div>
-	</div>
-</script>
-
-<div id="page-wrapper" class="container">
-	<h2>Result JS code</h2>
-	<div id="results"></div>
-</div>
-<script type="text/javascript">
 	
-var slidesArr = [
-  {
-    url: 'https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg',
-    text: 'Orla Perć',
-  },
-  {
-    url: 'http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg',
-    text: 'Mikołajki',
-  },
-  {
-    url: 'https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png',
-    text: 'Hiszpania',
-  },
-  {
-    url: 'https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    text: 'Miami',
-  },
-  {
-    url: 'https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    text: 'Canion',
-  },
-];
-
 </script>
 
-
-<script type="x-tmpl-mustache" id="template-image-list">
-	
-	<div class="mycarousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
-		{{{elements}}} {{url}}
-	</div>
-</script>
-
-
-<script type="x-tmpl-mustache" id="template-image-content">
+<script type="x-tmpl-mustache" id="template-slide-content">
 	
 	<div>
 		<header>Another slide</header>
 		<h1 class="title">{{title}}</h1>
-		<div>{{{description}}}</div>
+		<div>{{{elements}}}</div>
 	</div>
 </script>
 
-
-<script type="x-tmpl-mustache" id="template-image">
-		<div class="container" id="{{id}}">
-			
-			<h1 class="title">{{title}}</h1>
-			<div>{{{description}}}</div>
-		</div>
-</script> 
+<div id="page-wrapper" class="container">
+	<h1>Result JS code</h1>
+	<div id="results2"></div>
+</div>
 
 <script type="text/javascript" id="template-image">
 
@@ -173,31 +68,40 @@ var slidesArr = [
 		{
 			id: 'image1',
 			title: 'Lorem ipsum.',
-			description: '<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg" alt="Photo placeholder"> <p>Orla Perć</p>'
 		},
 		{
 			id: 'image2',
 			title: 'Lorem ipsum.',
-			description: '<img class="carouselimage" src="http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg" alt="Photo placeholder"> <p>Mikołajki</p>'
 		},
 		{
 			id: 'image3',
 			title: 'Lorem ipsum.',
-			description: '<img class="carouselimage" src="https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png" alt="Photo placeholder"> <p>Spain</p>'
 		},
 		{
 			id: 'image4',
 			title: 'Lorem ipsum.',
-			description: '<img class="carouselimage" src="https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: '<img class="carouselimage" src="https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Miami</p>'
 		},
 				{
 			id: 'image5',
 			title: 'Lorem ipsum.',
-			description: ' <img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Dolor sit.</p>'
+			description: ' <img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Canion</p>'
 		},
 	];
 </script>
-	
+							
+			
+			
+		</div>
+
+<!-- Mustache -->
+
+
+
+
 	
 
 <!-- Script -->

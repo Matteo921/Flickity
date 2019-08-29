@@ -1,22 +1,24 @@
+
+// import carousel
 (function(){
-
-var templatebox = document.getElementById('template-image-list').innerHTML;
-var templateItem = document.getElementById('template-image-content').innerHTML;
 var templateSlide = document.getElementById('template-slide').innerHTML;
+var templatebox = document.getElementById('template-slide-content').innerHTML;
 
-Mustache.parse(templateItem);
+Mustache.parse(templateSlide);
 
-var listItem = '';
-	for(var i = 0; i < imageData.length; i++){
-
-		listItem += Mustache.render(templateItem, imageData[i]);
+var slideItem = '';
+	for(var k = 0; k < imageData.length; k++){
+		
+		slideItem += Mustache.render(templateSlide, imageData[k]);
 	}
 
-var fullImageList = Mustache.render(templatebox,{elements: listItem});
-results.insertAdjacentHTML('beforeend', fullImageList)
+var feedbackslide = Mustache.render(templatebox,{elements: slideItem});
+results2.insertAdjacentHTML('beforeend', feedbackslide)
 })();
 
-var elem = document.querySelector('.mycarousel');
+
+var elem = document.querySelector('.carousel-cell');
+
 var flkty = new Flickity( elem, {
   // options
   freeScroll:true,
@@ -26,26 +28,3 @@ var flkty = new Flickity( elem, {
   draggable: false,
 });
 
-// element argument can be a selector string
-//   for an individual element
-// var flkty = new Flickity( '.carousel-cell'), {
-//   // options
-//   freeScroll: true,
-//   contain: true,
-//   prevNextButtons: false,
-  
-// });
-// // import carousel
-// (function(){
-
-// Mustache.parse(templateSlide);
-
-// var slideItem = '';
-// 	for(var k = 0; k < slideArr.length; k++){
-		
-// 		slideItem += Mustache.render(templateItem, imageData[k]);
-// 	}
-
-// var fullImageList = Mustache.render(templateSlide,{products: slideItem});
-// results2.insertAdjacentHTML('beforeend', fullImageList)
-// })();
