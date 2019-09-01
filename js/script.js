@@ -1,30 +1,27 @@
 
 // import carousel
 (function(){
-var templateSlide = document.getElementById('template-slide').innerHTML;
-var templatebox = document.getElementById('template-slide-content').innerHTML;
+  var templateSlide = document.getElementById('template-slide-item').innerHTML;
 
-Mustache.parse(templateSlide);
+  Mustache.parse(templateSlide);
 
-var slideItem = '';
-	for(var k = 0; k < imageData.length; k++){
-		
-		slideItem += Mustache.render(templateSlide, imageData[k]);
-	}
+  var listSlides = '';
 
-var feedbackslide = Mustache.render(templatebox,{elements: slideItem});
-results2.insertAdjacentHTML('beforeend', feedbackslide)
-})();
+  for(var i = 0; i < imageData.length; i++){
+    listSlides += Mustache.render(templateSlide, imageData[i]);
+  }
 
+  var fullSlidesList = Mustache.render(listSlides);
+  results.insertAdjacentHTML('beforeend', fullSlidesList);
 
-var elem = document.querySelector('.carousel-cell');
-
-var flkty = new Flickity( elem, {
+  var elem = document.querySelector('.carousel');
+  var flkty = new Flickity( elem, {
   // options
-  freeScroll:true,
   cellAlign: 'left',
   contain: true,
-  pageDots: false,
-  draggable: false,
-});
+  wrapAround: true,
+  hash: true,
+  pageDots: false
+  });
 
+})();
