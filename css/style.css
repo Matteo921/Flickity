@@ -379,54 +379,26 @@ a:link {
   background: #F5F5F2;
 }
 
-/* smaller, dark, rounded square */
-.flickity-button {
-  background: #333;
-}
-
-.flickity-button:hover {
-  background: #F90;
-}
-
-.flickity-prev-next-button {
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-/* icon color */
-.flickity-button-icon {
-  fill: white;
-}
-
-/* position outside */
-.flickity-prev-next-button.previous {
-  left: -40px;
-  top: 50%;
-}
-
-.flickity-prev-next-button.next {
-  right: -40px;
-  top: 50%;
-}
-
-.flickity-slider {
-  max-height: 700px;
-}
-
-ol.flickity-page-dots {
-  display: none;
-}
-
 body {
   max-height: 800px;
 }
 
 #map {
-  height: 400px;
+  height: 700px;
   /* The height is 400 pixels */
-  width: 100%;
+  width: 1200px;
   /* The width is the width of the web page */
+}
+
+h3 {
+  text-align: center;
+}
+
+.maps_box {
+  margin-top: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
