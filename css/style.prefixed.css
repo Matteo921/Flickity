@@ -402,4 +402,11 @@ h3 {
   -ms-flex-pack: center;
       justify-content: center;
 }
+
+.buttonmap {
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+}
 /*# sourceMappingURL=style.prefixed.css.map */
