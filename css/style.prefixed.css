@@ -344,12 +344,6 @@ template {
   margin: 0;
 }
 
-[class*="col-"] {
-  width: 100%;
-  padding: 12px;
-  float: left;
-}
-
 .container {
   max-width: 1200px;
   margin: auto;
@@ -381,6 +375,7 @@ a:link {
 
 body {
   max-height: 800px;
+  text-align: center;
 }
 
 #map {
@@ -388,6 +383,7 @@ body {
   /* The height is 400 pixels */
   width: 1200px;
   /* The width is the width of the web page */
+  text-align: center;
 }
 
 h3 {
@@ -396,11 +392,7 @@ h3 {
 
 .maps_box {
   margin-top: 100px;
-  text-align: center;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  text-align: -webkit-center;
 }
 
 .buttonmap {
@@ -408,5 +400,9 @@ h3 {
   height: 50px;
   border-radius: 10px;
   margin: 10px;
+}
+
+p {
+  color: black;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
