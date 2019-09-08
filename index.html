@@ -41,7 +41,7 @@
 					<div class='description'>
 						<h3>Stadium data:</h3>
 						{{{description}}}
-						{{coords}}
+						
 					</div>
 				</div>
 			</div>
@@ -61,59 +61,51 @@
 					{
 						id: 'image1',
 						title: 'Lorem ipsum.',
-						description: '<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg" alt="Photo placeholder"> <p>Orla Perć</p>'
-						// coords1: {lat: -33.874237, lng: 151.198517}
+						description: '<img class="carouselimage" src="https://i.ytimg.com/vi/oDyoWgKNpjE/maxresdefault.jpg" alt="Photo placeholder"> <p>Orla Perć</p>',
+						// coords: {lat: -33.874237, lng: 151.198517};
 					},
 					{
 						id: 'image2',
 						title: 'Lorem ipsum.',
-						description: '<img class="carouselimage" src="http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg" alt="Photo placeholder"> <p>Mikołajki</p>'
-						// coords2: {lat: -25.365, lng: 131.044}
+						description: '<img class="carouselimage" src="http://www.szlaki24.pl/images/photos/large/dd/af/ddaf398962c0413b41cc3fc66d5d737e5b62cf3d.jpeg" alt="Photo placeholder"> <p>Mikołajki</p>',
+						// coords: {lat: -25.365, lng: 131.044};
 					},
 					{
 						id: 'image3',
 						title: 'Lorem ipsum.',
-						description: '<img class="carouselimage" src="https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png" alt="Photo placeholder"> <p>Spain</p>'
-						// coords3: {lat: -66.706706, lng: 18.270364}
+						description: '<img class="carouselimage" src="https://f4fcdn.eu/wp-content/uploads/2018/07/Alicante-panorama.png" alt="Photo placeholder"> <p>Spain</p>',
+						// coords: {lat: -8.636258, lng: 39.691540};
 					},
 					{
 						id: 'image4',
 						title: 'Lorem ipsum.',
-						description: '<img class="carouselimage" src="https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Miami</p>'
-						// coords4: {lat: -66.822184, lng: 18.345800}
+						description: '<img class="carouselimage" src="https://images.pexels.com/photos/2784760/pexels-photo-2784760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Miami</p>',
+						// coords: {lat: -18.109222, lng: 65.740824};
 					},
 							{
 						id: 'image5',
 						title: 'Lorem ipsum.',
-						description: ' <img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Canion</p>'
-						// coords5: {lat: -64.757011, lng: 17.725569}
+						description: ' <img class="carouselimage" src="https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Photo placeholder"> <p>Canion</p>',
+						// coords: {lat: -70.235885, lng: 18.947303};
 					},
 				];
 			</script>
 
+
 		</div>
 
-	<!-- Google Maps -->
-<div class="maps_box" id="page-wrapper">
-	<p id="infos"></p>
+<div class="maps_box" id="page-wrapper">	
 	<h3>Google Maps Demo</h3>
-
-    <!--The div element for the map -->
-    
     	<button class="buttonmap"  id="center-map">Center map</button>
         <button  class="buttonmap" id="center-smooth">Center smoothly</button>
-    
-    <div class="map" id="map"></div>
-      
-      
-    
-    </div>
+    <p class="clickfeedback" id="infos"></p>
+    <div class="map" id="map"><!-- {{{coords}}} --></div>
+</div>
   
     
 
 
 <!-- Mustache -->
-
 <!-- Script -->
 <script src="js/Mustache.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

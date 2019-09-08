@@ -402,8 +402,9 @@ h3 {
   margin: 10px;
 }
 
-p {
+p .clickfeedback {
   color: black;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
