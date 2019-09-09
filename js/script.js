@@ -15,7 +15,7 @@
   results.insertAdjacentHTML('beforeend', fullSlidesList);
 
   var elem = document.querySelector('.carousel');
-  var flkty = new Flickity( elem, {
+  window.flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
   contain: true,
@@ -109,10 +109,13 @@
     });
           
     for (var i = 0; i < imageData.length; i++) {
-       var Marker = new google.maps.Marker({
+       var marker = new google.maps.Marker({
           position: imageData[i].coords,
           map:map
     });
+        marker.addListener('click', (function() {
+          flkty.select(this)
+        }).bind(i));
   };
 
     document.getElementById('center-map').addEventListener('click', function(event){
