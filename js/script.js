@@ -6,7 +6,7 @@
 
   var listSlides = '';
 
-  for( i = 0; i < imageData.length; i++){
+  for(var i = 0; i < imageData.length; i++){
     listSlides += Mustache.render(templateSlide, imageData[i]);
   };
 
@@ -183,10 +183,3 @@
   }; 
   
 })();  
-initMap();
-    for (var i = 0; i < imageData.length; i++) {
-       var Marker = new google.maps.Marker({
-          position: imageData[i].coords,
-          map:map
-    });
-  };
