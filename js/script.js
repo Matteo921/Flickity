@@ -109,18 +109,16 @@
     });
           
     for (var i = 0; i < imageData.length; i++) {
-<<<<<<< HEAD
-       var marker = new google.maps.Marker({
-          position: imageData[i].coords,
-=======
        var Marker = new google.maps.Marker({
-          position: imageData[0].coords,
->>>>>>> GoogleMaps
+          position: imageData[i].coords,
           map:map
     });
-        marker.addListener('click', (function() {
-          flkty.select(this)
-        }).bind(i));
+
+       Marker.addListener('click', (function() {
+         flkty.select(this)
+       }).bind(i));
+
+     
   };
 
     document.getElementById('center-map').addEventListener('click', function(event){
@@ -178,7 +176,7 @@
     coords = new google.maps.LatLng(coords);
 
     var steps = 12;
-    var panStep = {lat: (urulu.lat(31.993464) - mapCenter.lat(31.993464)) / steps, lng: (uluru.lng(36.537870) - mapCenter.lng(36.537870)) / steps};
+    var panStep = {lat: (coords.lat(31.993464) - mapCenter.lat(31.993464)) / steps, lng: (coords.lng(36.537870) - mapCenter.lng(36.537870)) / steps};
 
     var i = 0;
     var timer = window.setInterval(function(){
@@ -191,3 +189,11 @@
   }; 
   
 })();  
+
+var flkty = new Flickity('.carousel');
+
+flkty.on( 'smoothPanAndZoom', function( event, pointer, cellElement, cellIndex, smoothPanAndZoom ) {
+  if ( typeof cellIndex == 'number' ) {
+    flkty.smoothPanAndZoom( cellIndex );
+  }
+});
