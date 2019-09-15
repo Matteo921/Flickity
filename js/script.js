@@ -33,8 +33,8 @@
   
     window.initMap = function() {
     
-    var uluru = {lat: -25.363, lng: 131.044};
-    
+    var uluru = {lat: 31.993464, lng: 36.537870};
+    var japan = {lat: 35.009677, lng: 135.666762};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
       center: uluru
@@ -55,8 +55,8 @@
   
   
     window.initMap = function() {
-    var uluru = {lat: -25.363, lng: 131.044};
-
+    var uluru = {lat: 31.993464, lng: 36.537870};
+    var japan = {lat: 35.009677, lng: 135.666762};
     
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 4,
@@ -101,16 +101,21 @@
 (function(){ 
   
     window.initMap = function() {
-    var uluru = {lat: -25.363, lng: 131.044};
-    var portugal = {lat: -8.636258, lng: 39.691540}
+    var uluru = {lat: 31.993464, lng: 36.537870};
+    var japan = {lat: 35.009677, lng: 135.666762}
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 7,
       center: uluru
     });
           
     for (var i = 0; i < imageData.length; i++) {
+<<<<<<< HEAD
        var marker = new google.maps.Marker({
           position: imageData[i].coords,
+=======
+       var Marker = new google.maps.Marker({
+          position: imageData[0].coords,
+>>>>>>> GoogleMaps
           map:map
     });
         marker.addListener('click', (function() {
@@ -120,14 +125,14 @@
 
     document.getElementById('center-map').addEventListener('click', function(event){
       event.preventDefault();
-      map.panTo(portugal);
+      map.panTo(uluru);
       
       map.setZoom(10);
     });
 
     document.getElementById('center-smooth').addEventListener('click', function(event){
       event.preventDefault();
-      smoothPanAndZoom(map, 7, uluru);
+      smoothPanAndZoom(map, 7, japan);
     });
   } 
 
@@ -173,7 +178,7 @@
     coords = new google.maps.LatLng(coords);
 
     var steps = 12;
-    var panStep = {lat: (coords.lat() - mapCenter.lat()) / steps, lng: (coords.lng() - mapCenter.lng()) / steps};
+    var panStep = {lat: (urulu.lat(31.993464) - mapCenter.lat(31.993464)) / steps, lng: (uluru.lng(36.537870) - mapCenter.lng(36.537870)) / steps};
 
     var i = 0;
     var timer = window.setInterval(function(){
@@ -181,7 +186,7 @@
         window.clearInterval(timer);
         if(callback) callback();
       }
-      map.panTo({lat: mapCenter.lat() + panStep.lat * i, lng: mapCenter.lng() + panStep.lng * i});
+      map.panTo({lat: mapCenter.lat(31.993464) + panStep.lat * i, lng: mapCenter.lng(36.537870) + panStep.lng * i});
     }, 1000/30);
   }; 
   
