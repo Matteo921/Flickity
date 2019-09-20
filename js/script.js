@@ -118,7 +118,12 @@
          flkty.select(this)
        }).bind(i));
 
-     
+     flkty.on( 'change', function( index ) {
+      map.panTo(imageData[index].coords);
+      
+      map.setZoom(10);
+});
+
   };
 
     document.getElementById('center-map').addEventListener('click', function(event){
@@ -189,11 +194,3 @@
   }; 
   
 })();  
-
-var flkty = new Flickity('.carousel');
-
-flkty.on( 'smoothPanAndZoom', function( event, pointer, cellElement, cellIndex, smoothPanAndZoom ) {
-  if ( typeof cellIndex == 'number' ) {
-    flkty.smoothPanAndZoom( cellIndex );
-  }
-});
